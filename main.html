@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div id="map" style="height: 500px;"></div>
+
+  <script>
+    // Step 3: Fetch data from Excel file
+    fetch('Information_Entreprise_2023_ICAM.csv')
+      .then(response => response.text())
+      .then(data => {
+        // Step 4: Parse the data and iterate over each row
+        const rows = data.split('\n');
+        for (let i = 1; i < rows.length; i++) {
+          const columns = rows[i].split(',');
+
+          // Step 5: Convert address to coordinates using geocoding service
+          const address = columns[1];
+          const postalCode = columns[3];
+          const city = columns[4];
+          const geocodeUrl = `https://api.opencagedata.com/geocode/v1/json?q=${address},${postalCode},${city}&key=7dcf95de29cd45eb9b28cf03ebe74bcd`;
+
+          fetch(geocodeUrl)
+            .then(response => response.json())
+            .then(result => {
+              const lat = result.results[0].geometry.lat;
+              const lon = result.results[0].geometry.lng;
+
+              // Step 6: Create Leaflet map object
+              const map = L.map('map').setView([46.603354, 1.888334], 6);
+
+              // Step 7: Add marker to the map
+              const marker = L.marker([lat, lon]).addTo(map);
+
+              // Step 8: Create popup for the marker
+              const popupContent = columns.join('<br>');
+              marker.bindPopup(popupContent);
+            });
+        }
+      });
+  </script>
+</body>
+</html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div id="map" style="height: 500px;"></div>
+
+  <script>
+    // Step 3: Fetch data from Excel file
+    fetch('Information_Entreprise_2023_ICAM.csv')
+      .then(response => response.text())
+      .then(data => {
+        // Step 4: Parse the data and iterate over each row
+        const rows = data.split('\n');
+        for (let i = 1; i < rows.length; i++) {
+          const columns = rows[i].split(',');
+
+          // Step 5: Convert address to coordinates using geocoding service
+          const address = columns[1];
+          const postalCode = columns[3];
+          const city = columns[4];
+          const geocodeUrl = `https://api.opencagedata.com/geocode/v1/json?q=${address},${postalCode},${city}&key=7dcf95de29cd45eb9b28cf03ebe74bcd`;
+
+          fetch(geocodeUrl)
+            .then(response => response.json())
+            .then(result => {
+              const lat = result.results[0].geometry.lat;
+              const lon = result.results[0].geometry.lng;
+
+              // Step 6: Create Leaflet map object
+              const map = L.map('map').setView([46.603354, 1.888334], 6);
+
+              // Step 7: Add marker to the map
+              const marker = L.marker([lat, lon]).addTo(map);
+
+              // Step 8: Create popup for the marker
+              const popupContent = columns.join('<br>');
+              marker.bindPopup(popupContent);
+            });
+        }
+      });
+  </script>
+</body>
+</html>
