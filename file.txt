@@ -1,0 +1,69 @@
+[code]
+System:
+  Kernel: 5.15.0-76-generic x86_64 bits: 64 compiler: gcc v: 11.3.0 Desktop: Cinnamon 5.8.4
+    tk: GTK 3.24.33 wm: muffin dm: LightDM Distro: Linux Mint 21.2 Victoria base: Ubuntu 22.04 jammy
+Machine:
+  Type: Desktop System: Hewlett-Packard product: HP Compaq Pro 4300 SFF PC v: N/A
+    serial: <superuser required> Chassis: type: 3 serial: <superuser required>
+  Mobo: Hewlett-Packard model: 2ADE v: 1.0 serial: <superuser required> UEFI: AMI v: 8.08
+    date: 12/18/2012
+CPU:
+  Info: dual core model: Intel Celeron G550 bits: 64 type: MCP arch: Sandy Bridge rev: 7 cache:
+    L1: 128 KiB L2: 512 KiB L3: 2 MiB
+  Speed (MHz): avg: 2594 min/max: 1600/2600 cores: 1: 2594 2: 2594 bogomips: 10375
+  Flags: ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3
+Graphics:
+  Device-1: Intel 2nd Generation Core Processor Family Integrated Graphics vendor: Hewlett-Packard
+    driver: i915 v: kernel ports: active: VGA-1 empty: DP-1,HDMI-A-1 bus-ID: 00:02.0
+    chip-ID: 8086:0102
+  Display: x11 server: X.Org v: 1.21.1.4 driver: X: loaded: modesetting unloaded: fbdev,vesa
+    gpu: i915 display-ID: :0 screens: 1
+  Screen-1: 0 s-res: 1360x768 s-dpi: 96
+  Monitor-1: VGA-1 model: Sony TV res: 1360x768 dpi: 22 diag: 1836mm (72.3")
+  OpenGL: renderer: Mesa Intel HD Graphics 2000 (SNB GT1) v: 3.3 Mesa 22.2.5 direct render: Yes
+Audio:
+  Device-1: Intel 6 Series/C200 Series Family High Definition Audio vendor: Hewlett-Packard
+    driver: snd_hda_intel v: kernel bus-ID: 00:1b.0 chip-ID: 8086:1c20
+  Sound Server-1: ALSA v: k5.15.0-76-generic running: yes
+  Sound Server-2: PulseAudio v: 15.99.1 running: yes
+  Sound Server-3: PipeWire v: 0.3.48 running: yes
+Network:
+  Device-1: Broadcom NetLink BCM57788 Gigabit Ethernet PCIe vendor: Hewlett-Packard driver: tg3
+    v: kernel pcie: speed: 2.5 GT/s lanes: 1 port: N/A bus-ID: 05:00.0 chip-ID: 14e4:1691
+  IF: enp5s0 state: up speed: 100 Mbps duplex: full mac: <filter>
+Drives:
+  Local Storage: total: 232.89 GiB used: 11 GiB (4.7%)
+  ID-1: /dev/sda vendor: Western Digital model: WD2500AAKX-60U6AA0 size: 232.89 GiB
+    speed: 3.0 Gb/s serial: <filter>
+Partition:
+  ID-1: / size: 227.68 GiB used: 11 GiB (4.8%) fs: ext4 dev: /dev/sda2
+  ID-2: /boot/efi size: 511 MiB used: 6.1 MiB (1.2%) fs: vfat dev: /dev/sda1
+Swap:
+  ID-1: swap-1 type: file size: 2 GiB used: 0 KiB (0.0%) priority: -2 file: /swapfile
+USB:
+  Hub-1: 1-0:1 info: Full speed or root hub ports: 2 rev: 2.0 speed: 480 Mb/s chip-ID: 1d6b:0002
+  Hub-2: 1-1:2 info: Intel Integrated Rate Matching Hub ports: 4 rev: 2.0 speed: 480 Mb/s
+    chip-ID: 8087:0024
+  Hub-3: 2-0:1 info: Full speed or root hub ports: 2 rev: 2.0 speed: 480 Mb/s chip-ID: 1d6b:0002
+  Hub-4: 2-1:2 info: Intel Integrated Rate Matching Hub ports: 6 rev: 2.0 speed: 480 Mb/s
+    chip-ID: 8087:0024
+  Device-1: 2-1.1:3 info: Belkin Keyboard type: Keyboard,HID driver: hid-generic,usbhid rev: 1.1
+    speed: 1.5 Mb/s chip-ID: 1241:1603
+  Device-2: 2-1.2:4 info: Logitech Optical Wheel Mouse type: Mouse driver: hid-generic,usbhid
+    rev: 2.0 speed: 1.5 Mb/s chip-ID: 046d:c018
+Sensors:
+  System Temperatures: cpu: 29.8 C mobo: 27.8 C
+  Fan Speeds (RPM): N/A
+Repos:
+  Packages: apt: 2096
+  No active apt repos in: /etc/apt/sources.list
+  Active apt repos in: /etc/apt/sources.list.d/official-package-repositories.list
+    1: deb http: //packages.linuxmint.com victoria main upstream import backport
+    2: deb http: //archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+    3: deb http: //archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+    4: deb http: //archive.ubuntu.com/ubuntu jammy-backports main restricted universe multiverse
+    5: deb http: //security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+Info:
+  Processes: 207 Uptime: 15m Memory: 3.71 GiB used: 1.65 GiB (44.6%) Init: systemd v: 249
+  runlevel: 5 Compilers: gcc: 11.3.0 alt: 11/12 Client: Unknown python3.10 client inxi: 3.3.13
+[/code]
